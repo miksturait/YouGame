@@ -1,0 +1,12 @@
+- if user_signed_in?
+  .ember_nav{style: 'display:none'}
+    %ul#subnav.nav.pull-left
+      %li.mission= link_to_function t('.mission'), "YoutrackGame.changePage('mission')"
+      %li.activity= link_to_function t('.log'), "YoutrackGame.changePage('activity')"
+      %li.ranking= link_to_function t('.engineers'), "YoutrackGame.showRanking('today')"
+      %li.profile= link_to_function t('.dossier'), "YoutrackGame.showMyProfile()"
+.contributors
+  = link_to 'http://www.darksands.com/', title: 'Planet graphics: Dark Sands' do
+    = image_tag 'darksands.png'
+  = link_to 'http://onehundred-monsters.deviantart.com/', title: 'Brood graphics: Onehundred-Monsters' do
+    = image_tag '100monsters.png'

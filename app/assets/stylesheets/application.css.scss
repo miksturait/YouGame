@@ -1,0 +1,15 @@
+// First import journal variables
+@import "bootswatch/superhero/variables";
+
+// Then bootstrap itself
+@import "bootstrap";
+
+// Responsive styles go here in case you want them
+@import "bootstrap-responsive";
+
+// And finally bootswatch style itself
+@import "bootswatch/superhero/bootswatch";
+
+@import "colorbox-rails";
+
+@import 'styles';

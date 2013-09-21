@@ -1,0 +1,63 @@
+en:
+  planet_names:
+    balance: Balance
+    daliasunta: Daliasunta
+    izaria: Izaria
+    kainus: Kainus
+    lockenheim: Lockenheim
+    nasira: Nasira
+    nena: Nena
+    oceanis: Oceanis
+    paladinus: Paladinus
+    semus: Semus
+    xeonus: Xeonus
+    zeldawood: Zeldawood
+  planet_descriptions:
+    balance: "Balance is a relatively isolated world sitting far from the galaxy's populations centers. This area is left untouched by humans and allows nature to exist in its natural state."
+    daliasunta: "Daliasunta is a windy hot world. Under the thick cloudy atmosphere lies a rocky, iron rich surface."
+    izaria: "The planet sits at earth-like temperatures, yet is very different. An asteroid impact may have been responsible for the lack of an atmosphere."
+    kainus: "Thick ice cuts its way down from the poles and across the planet. Much of the inhabitants live near the equator where temperatures are the warmest."
+    lockenheim: "At first glance planet Lockenheim is an icy world with little to offer. Underneath the ice there are large deposits of rare earth metals."
+    nasira: "The planet has only a small magnetic field leaving much of surface exposed to higher levels of solar radiation than what is seen on earth."
+    nena: "Nena is often referred to as the hidden gem of the galaxy, a beautiful world. Endless sandy beaches, the sprawling green forests, and the snowy mountains nearly void of anybody."
+    oceanis: "The planet Oceanis orbits a close binary consisting of a yellow and an orange star.  The surface is covered in a global ocean thats dotted with green islands."
+    paladinus: "Paladinus is a warm tropical world. The planet consists of one large continent that encompasses a third of the planet."
+    semus: "A large dry world with a southern ocean. The system sits in an important area with connections to three regions (Polaris, Izar, and Hercules)."
+    xeonus: "Xeonus was the first world discovered in this system. The planet was a dry desert world similar to Mars, with most of its water trapped in the polar ice."
+    zeldawood: "The planet lacks of any large mountain ranges leaves the continents flat and covered in dense forests. Nearly the entire planet has a temperate climate, though sections of the planet are susceptible to extreme droughts."
+  brood_names:
+    husks: Husks
+    blue_poltergeists: Blue Poltergeists
+    creepers: Creepers
+    eternal_worms: Eternal Worms
+    flaming_rockers: Flaming Rockers
+    giant_hornets: Giant Hornets
+    metallic_carvers: Metallic Carvers
+    octroms: Octroms
+    pucking_beetles: Pucking Beetles
+    woodygators: Woodygators
+  brood_descriptions:
+    husks: "It is believed that the Husks are somehow related to the humans. However, their mutated body and aggressive nature do not allow to any communication."
+    blue_poltergeists: "Those fly-looking beasts move very fast and are extremely dangerous. Four pairs of eyes catch every detail of the surrounding world."
+    creepers: "It is a medium size bug that usually attacks from the ground. Its large and strong head is able to crash rocks into pieces."
+    eternal_worms: "Those scorpion-looking creatures are supposed to come from large, underground nests. This worm poisons his prey and eats it within few minutes afterwards."
+    flaming_rockers: "From the outside it looks like a horse. From the inside it is a burning demon that uses his flames only after being attacked."
+    giant_hornets: "Those creatures move slowly for the enormous size. However, when it gets close enough to its prey, it is deadly accurate."
+    metallic_carvers: "The Carvers are born runners. When they decide to attack other creature, it is a matter of seconds when the prey is left torn on the ground."
+    octroms: "The Octroms usually live on swampy areas where they can quickly disappear when attacked. Those creatures are vulnerable since the innards are protected by a very thin layer of skin."
+    pucking_beetles: "Those bugs change their color as they become more aggressive. They can attack by pucking with toxic enzymes, which can melt most of the known organic forms."
+    woodygators: "They look like a hybrid of alligator and... a tree. However, their jaws are unbelievably powerful and their body is hard to injure."
+  mineral_names:
+    iridium: Iridium
+    palladinum: Palladinum
+    platinum: Platinum
+    mercury: Mercury
+    sentix: Sentix
+    covalium: Covalium
+  mineral_descriptions:
+    iridium: "Iridium is a blue, glowing mineral that can be found in rocky terrains. It is used in nuclear reactors as a stabilizer."
+    palladinum: "Palladinum is produced as a side effect of photosynthesis of giant plants. This mineral is used in the modern medicine."
+    platinum: "Platinum comes from the ground in very small amounts. It is used in advanced technologies."
+    mercury: "Mercury is a liquid metal that comes from the ground. It can be dangerous when not stored properly."
+    sentix: "Sentix is a synthetic mineral with a shining yellow surface. It can be produced by joining several other minerals."
+    covalium: "Covalium is a natural mineral that can be found underground in large amounts. However it is difficult to transport as it is very heavy."

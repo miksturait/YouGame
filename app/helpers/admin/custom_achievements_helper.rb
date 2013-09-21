@@ -1,0 +1,2 @@
+module Admin::CustomAchievementsHelper
+end

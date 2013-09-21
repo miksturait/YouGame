@@ -1,0 +1,14 @@
+%h2= t('.header')
+
+= simple_form_for(@member, url: my_tracker_path, html: {class: 'form-horizontal well' }) do |f|
+  .alert.alert-error
+    %button.close{type: 'button', data: {dismiss: 'alert'}}
+      &times;
+    = t('.user_info_html')
+  %p= t('.tracker_info_html')
+  .form-inputs
+    = f.input :tracker_url, input_html: { placeholder: 'http://' }
+    = f.input :login
+    = f.input :password
+  .form-actions
+    = f.button :submit, "Connect with YouTrack Account", class: 'btn btn-primary'

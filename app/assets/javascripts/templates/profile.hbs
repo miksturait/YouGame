@@ -1,0 +1,147 @@
+{{#with member}}
+<div class="row-fluid dossier-header">
+    <div class="span3"></div>
+    <div class="span6">
+        <div class="row-fluid">
+            <div class="span2">
+                <a class="pull-left" href="#">
+                    <img {{bindAttr src="avatarMidUrl"}} />
+                </a>
+            </div>
+            <div class="span4">
+                <h2>{{full_name}}</h2>
+                <h4>{{expLevelName}}</h4>
+            </div>
+            <div class="span5 ta_r">
+                <div class="row-fluid">
+                    <div class="dossier-stamina span4 ta_c" title="Keep stamina at least 30% to work efficiently">
+                        <input type="text" class="knob-input" data-min="0" data-max="100" {{bindAttr value="currentStamina"}}/>
+                        <p {{bindAttr class="cssStamina"}}>Stamina</p>
+                    </div>
+                    <div class="dossier-progress span4 ta_c">
+                        <input type="text" class="knob-input" {{bindAttr data-min="expLevelMinPoints" data-max="expLevelMaxPoints" value="exp_points"}}/>
+                        <p>Experience</p>
+                    </div>
+                    <div class="dossier-level span4 ta_c">
+                        <span class="dossier-level badge badge-warning">{{expLevel}}</span>
+                        <p>Level</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="span3"></div>
+</div>
+
+<div class="row-fluid dossier-assignments">
+    <div class="span4 well">
+        <h4>Backlog</h4>
+        {{#if hasBacklogTasks}}
+            <ul>
+                {{#each backlogTasks}}
+                    <li>
+                        <a href="{{linkForIssue issue_id}}" {{bindAttr title="issue_id"}} target="_blank">
+                            <span class="label {{difficultyLevelClass difficulty}}">{{difficultyLevel difficulty}}</span>&nbsp;&nbsp;
+                            {{summary}}
+                        </a>
+                    </li>
+                {{/each}}
+            </ul>
+        {{else}}
+            <p class="hint">Got nothing in plans</p>
+        {{/if}}
+    </div>
+
+    <div class="span4 well">
+        <h4>In progress</h4>
+        {{#if hasInProgressTasks}}
+            <ul>
+                {{#each inProgressTasks}}
+                    <li>
+                        <a href="{{linkForIssue issue_id}}" {{bindAttr title="issue_id"}} target="_blank">
+                            <span class="label {{difficultyLevelClass difficulty}}">{{difficultyLevel difficulty}}</span>&nbsp;&nbsp;
+                            {{summary}}
+                        </a>
+                    </li>
+                {{/each}}
+            </ul>
+        {{else}}
+            <p class="hint">I'm doing nothing at the moment</p>
+        {{/if}}
+    </div>
+
+    <div class="span4 well">
+        <h4>Completed</h4>
+        {{#if hasAcceptedTasks}}
+            <ul>
+                {{#each acceptedTasks}}
+                    <li>
+                        <a href="{{linkForIssue issue_id}}" {{bindAttr title="issue_id"}} target="_blank">
+                            <span class="label {{difficultyLevelClass difficulty}}">{{difficultyLevel difficulty}}</span>&nbsp;&nbsp;
+                            {{summary}}
+                        </a>
+                    </li>
+                {{/each}}
+            </ul>
+        {{else}}
+            <p class="hint">I have not finished any task yet</p>
+        {{/if}}
+    </div>
+</div>
+
+<div class="row-fluid">
+    <div class="span12 well">
+        <h4>Achievements</h4>
+        {{#if hasAchievementsObtains}}
+            {{#each group in groupedAchievementsObtains}}
+                <div class="row-fluid">
+                {{#each group}}
+
+                    <div class="span3 ta_c">
+                        <a {{bindAttr href="getPictureUrl"}} data-colorbox="true">
+                            <img {{bindAttr src="getPictureUrl" title="getMessage" alt="getName"}} width="100"/>
+                        </a>
+                        <br/>
+                        <h6>{{getName}} <span class="badge badge-warning">{{occurrences}}</span></h6>
+                    </div>
+                {{/each}}
+                </div>
+            {{/each}}
+        {{else}}
+            <p class="hint">I'm working on collecting new achievements, give me some time</p>
+        {{/if}}
+    </div>
+</div>
+<div class="row-fluid">
+    <div class="span6 well">
+        <h4>Minerals</h4>
+        {{#if collectedAnyMineral}}
+            {{#each mineral in mineralsList}}
+            <p><img {{bindAttr src="mineral.mineral_image_path"}} width="24"/> {{mineral.mineral_label}}</p>
+            <div class="progress progress-warning">
+                <div class="bar ta_l" {{bindAttr style="mineral.mineral_progress_style"}}></div>
+                <span class="points">{{mineral.total_minerals_points}}</span>
+            </div>
+            {{/each}}
+        {{else}}
+            <p class="hint">I haven't collected any mineral yet</p>
+        {{/if}}
+    </div>
+    <div class="span6 well">
+        <h4>Latest logs</h4>
+        {{#if hasLogs}}
+            {{#each fiveLatestLogs}}
+                <div class="media">
+                    <div class="media-body">
+                        <span class="log-time-ago">{{formattedTimeAgo}}</span>
+                        <h6 class="media-heading">{{subject}}</h6>
+                        {{raw text}}
+                    </div>
+                </div>
+            {{/each}}
+        {{else}}
+            <p class="hint">Nothing happened recently</p>
+        {{/if}}
+    </div>
+</div>
+{{/with}}

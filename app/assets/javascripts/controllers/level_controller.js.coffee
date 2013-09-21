@@ -1,0 +1,1 @@
+YoutrackGame.LevelController = Ember.ObjectController.create()

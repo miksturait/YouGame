@@ -1,0 +1,20 @@
+%h2= "Edit #{resource_name.to_s.humanize}"
+
+= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, class: 'form-horizontal well' }) do |f|
+  %h4= "Desktop Notifications"
+  %p YouGame can display a short notification about your actions consequences, like collected minerals or gained experience.
+  .allow-notifications-box
+    = link_to_function 'Enable notifications', 'webkitNotifications.requestPermission()', class: 'btn btn-primary'
+  .allowed-notifications-box{style: 'display: none'}
+    = link_to_function 'Notifications already enabled', 'void()', class: 'btn btn-success'
+  %br
+
+  %h4= "Account"
+  .form-inputs
+    = f.input :receive_emails, hint: 'Weekly & monthly updates and reports'
+    = f.input :email, required: true, autofocus: true
+    = f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false
+    = f.input :password_confirmation, required: false
+    = f.input :current_password, hint: "we need your current password to confirm your changes", required: true
+  .form-actions
+    = f.button :submit, "Update", class: 'btn btn-primary'

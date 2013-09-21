@@ -1,0 +1,52 @@
+.row-fluid
+  .span10
+    %h1= link_to @update_worker.title, "http://yougameapp.com", title: t('mails.week_update.go_to_yougame')
+    %p.subtitle= @update_worker.subtitle
+
+.row-fluid.stats
+  .span3
+    .well
+      %h4= t('mails.week_update.mission_progress')
+      .percent-progress{class: @update_worker.progress_css_class}= @update_worker.progress_percent
+      .label-progress= @update_worker.progress_label
+
+  .span4
+    .well
+      %h4= t('mails.week_update.you')
+      = image_tag @update_worker.member_avatar, title: @update_worker.member.full_name, alt: @update_worker.member.full_name
+      .row-fluid
+        .span4
+          = t('mails.week_update.collected_last_week')
+          .minerals.badge-warning= @update_worker.member_minerals_last_week
+        .span4
+          = t('mails.week_update.in_ranking')
+          .ranking-mineral-place= @update_worker.member_place_in_ranking
+
+  .span4
+    .well
+      %h4= t('mails.week_update.last_week_leader')
+      = image_tag @update_worker.leader_avatar, title: @update_worker.leader.full_name, alt: @update_worker.leader.full_name
+      .row-fluid
+        .span4
+          = t('mails.week_update.collected_last_week')
+          .minerals.badge-warning= @update_worker.leader_minerals_last_week
+        .span4
+          = t('mails.week_update.in_ranking')
+          .ranking-mineral-place= @update_worker.leader_place_in_ranking
+
+
+.row-fluid
+  .span10.well
+    %h2= t('mails.week_update.organisation_reports')
+    .reports
+      - if @update_worker.reports.present?
+        - @update_worker.reports.each do |report|
+          .row-fluid
+            .span10
+              = image_tag report.creator_avatar_small, title: report.creator_full_name, alt: report.creator_full_name
+              %h5= report.heading.html_safe
+          .row-fluid.message-container
+            .span10
+              = report.message_html.html_safe
+      - else
+        = t('mails.week_update.no_reports')

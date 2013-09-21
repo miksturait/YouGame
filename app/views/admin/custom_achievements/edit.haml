@@ -1,0 +1,7 @@
+%h2= t('.title')
+= simple_form_for resource, url: admin_custom_achievement_path(resource), html: {method: :put, class: 'form-horizontal well'} do |f|
+  .fltr= link_to t('back'), :back, class: 'btn btn-small'
+  .form-inputs
+    = render 'form_fields', f: f
+  .form-actions
+    = f.button :submit, t('save'), class: 'btn btn-primary'

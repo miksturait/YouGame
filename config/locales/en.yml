@@ -1,0 +1,134 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  back: "Back"
+  save: "Save"
+  edit: "Edit"
+  remove: "Remove"
+  confirmation: "Are you sure?"
+  activerecord:
+    attributes:
+      tracker:
+        url: Tracker url
+        issue_difficulty_field: Difficulty field
+        issue_accepted_state: Accepted state names
+        issue_in_progress_state: In progress state names
+        issue_backlog_state: Backlog state names
+        hidden_project_ids: Hidden projects
+        hidden_group_ids: Hidden groups
+        hidden_member_ids: Hidden members
+      tracker/report:
+        message: Report
+  layouts:
+    components:
+      side_bar:
+        not_signed_in: You are not signed in
+        sign_in: Sign in
+        me: Me
+        groups: Groups
+        projects: Projects
+        admin: Admin
+        screen: The Screen
+        create_instance: Create your YouGame instance
+        settings: Settings
+        custom_achievements: Custom Achievements
+        bind_project_tracker: Add your YouTrack account
+        forgot_password: Forgot your password?
+        about: About YouGame
+        fork_me: "Fork me on Github"
+      main_nav:
+        edit_profile: Edit profile
+        make_report: Make Report
+        sign_out: Sign out
+        dashboard: Dashboard
+        admin: Admin
+        settings: Settings
+        custom_achievements: Custom Achievements
+      footer:
+        mission: Mission
+        log: Log
+        engineers: Engineers
+        dossier: Dossier
+  my:
+    trackers:
+      new:
+        header: YouTrack account
+        user_info_html: |
+          Your email address has not been found in any of registered trackers.
+          Remember to use the same email address in YouGame as you use in YouTrack.
+        tracker_info_html: |
+          If your team has not been using YouGame yet,
+          then reqister your tracker with the form below.
+          Admin credentials will be needed to setup your YouTrack.
+      create:
+        success: YouTrack account has been successfully verified
+      update:
+        success: Tracker settings updated successfully
+      full_update:
+        success: Okey, your tracker's core data will be synchronized shortly...
+      generate_api_key:
+        success: API key has been regenerated
+    reports:
+      new:
+        placeholder: Share your team progress on the project
+  admin:
+    custom_achievements:
+      index:
+        add_button: Create Achievement
+        title: "Achievements"
+      custom_achievements:
+        edit_button: Edit
+        remove_button: Remove
+      edit:
+        title: "Edit Achievement"
+      new:
+        title: "New Achievement"
+      grant:
+        achivement_unlocked: "Achievement granted to selected members"
+      show:
+        title: "Grant achievement"
+        grant: "Grant"
+      custom_achievement:
+        grant: "Grant"
+    settings:
+      show:
+        perform_full_update: "Synchronize core data"
+        perform_full_update_title: "Click to sync groups, projects, members etc."
+        last_full_sync_at: "last core sync was %{time}"
+        generate_api_key: "Regenerate API key"
+        api_key_info_html: "You can use following API key to grant points and achievements to the members of this tracker. More details can be found in <a href=\"/YouGameAPI.pdf\" target=\"_blank\">API manual</a>."
+        api_key_title: "API key"
+        settings_title: 'Tracker settings'
+  never: "never"
+  audits:
+    tracker_issue:
+      subject_html: "Points collected by %{full_name}"
+      text_html: "Scored <span class=\"label label-info\">%{exp} Exp</span> and <span class=\"label label-warning\">%{mineral} %{mineral_label}</span> for completing <a href=\"%{issue_url}\" title=\"%{issue_id}\" target=\"_blank\"><span class=\"important-text\">%{task}</span></a>"
+    achievement:
+      subject_html: "Achievement unlocked by %{full_name}"
+      text_html: "Scored <span class=\"label label-info\">%{exp} Exp</span> and <span class=\"label label-warning\">%{mineral} %{mineral_label}</span> for unlocking <span class=\"important-text\">%{achievement}</span>"
+    api_points_request:
+      subject_html: "Points collected by %{full_name}"
+      text_html: "Scored <span class=\"label label-info\">%{exp} Exp</span> and <span class=\"label label-warning\">%{mineral} %{mineral_label}</span> for <a href=\"%{related_url}\" onclick=\"return %{related_url_present};\" target=\"_blank\"><span class=\"important-text\">%{description}</span></a>"
+
+  mails:
+    week_update:
+      mission_progress: "Mission Progress"
+      you: "You"
+      in_ranking: "In Ranking:"
+      collected_last_week: "Collected minerals:"
+      last_week_leader: "Week Leader"
+      progress_labels:
+        great: Great job so far!
+        right_direction: "It's right direction"
+        on_track: "We are on right track"
+        perform_better: "We can perform better"
+        not_enough_minerals: "Not enough minerals"
+        mission_in_danger: "Mission is in danger!"
+      title: "Week Update #%{week_number}"
+      subtitle: "Here is what happened between %{from} and %{to}"
+      organisation_reports: "Organisation Reports"
+      go_to_yougame: "Go to YouGame"
+      no_reports: "Organisation did not receive any reports from units. Are they alive?"
+      use_markdown: "You can use markdown in your reports."

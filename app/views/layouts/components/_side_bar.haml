@@ -1,0 +1,17 @@
+.well.sidebar-nav
+  %ul.nav.nav-list
+    %li.nav-header= t('.sign_in')
+    %li
+      = simple_form_for(User.new, url: user_session_path, wrapper: :default) do |f|
+        .form-inputs
+          = f.input :email, required: false, autofocus: true
+          = f.input :password, required: false
+          = f.input :remember_me, as: :boolean
+          = f.button :submit, t('.sign_in'), class: 'btn btn-primary'
+    %li= link_to t('.forgot_password'), new_user_password_path
+.well.sidebar-nav
+  %ul.nav.nav-list
+    %li.nav-header= t('.not_signed_in')
+    %li= link_to_icon 'icon-asterisk icon-white', t('.sign_up'), new_user_registration_path
+    %li= link_to_icon 'icon-question-sign icon-white', t('.about'), home_index_path
+    %li= link_to_icon 'icon-share icon-white', t('.fork_me'), 'https://github.com/miksturait/YouGame'

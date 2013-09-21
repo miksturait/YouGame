@@ -1,0 +1,20 @@
+<div class="ta_c"><h2>Just happened</h2></div>
+{{#each audits}}
+<div class="row-fluid audit">
+    <div class="span3"></div>
+    <div class="span6">
+        <div class="row-fluid">
+            <div class="span3">
+                <a {{action "showMemberProfile" member}}>
+                    <img {{bindAttr src="member.avatarMidUrl"}} />
+                </a>
+            </div>
+            <div class="span9">
+                <h4>{{subject}}</h4>
+                <p>{{raw text}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="span3"></div>
+</div>
+{{/each}}

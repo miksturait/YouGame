@@ -1,0 +1,13 @@
+#container
+  #mission.page{style: 'display:none'}
+  #ranking.page{style: 'display:none'}
+  #activity.page{style: 'display:none'}
+  #audit.page{style: 'display:none'}
+  #profile.page{style: 'display:none'}
+
+= content_for :javascript do
+  YoutrackGame.pusherKey = '#{ENV["PUSHER_KEY"]}'
+  YoutrackGame.config.set('currentMemberId', #{current_user.tracker_member.id});
+  YoutrackGame.config.set('trackerId', '#{@tracker.id}');
+  YoutrackGame.config.set('trackedMembersIds', #{raw @tracked_users_ids});
+  YoutrackGame.DataController.loadData(#{raw @broadcast.to_json})

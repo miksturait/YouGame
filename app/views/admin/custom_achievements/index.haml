@@ -1,0 +1,16 @@
+%h2= t('.title')
+
+%p= link_to t('.add_button'), new_admin_custom_achievement_path, class: 'btn btn-primary'
+
+%table.table.table-hover
+  %thead
+    %tr
+      %th Picture
+      %th Symbol
+      %th Name
+      %th Message
+      %th Experience Points
+      %th Mineral Points
+      %th
+  %tbody
+    = render collection

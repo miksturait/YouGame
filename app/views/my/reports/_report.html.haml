@@ -1,0 +1,17 @@
+.accordion
+  .accordion-group.report-group.well
+    .accordion-heading
+      %a.accordion-toggle{data: {toggle: 'collapse', parent: '.accordion'}, href: "#collapse#{index}"}
+        .row-fluid
+          .span10
+            %h4= report.project_name
+          .span2
+            - if report.message.present?
+              .alert.alert-success OK
+            - else
+              .alert.alert-danger Missing
+    .accordion-body.collapse{id: "collapse#{index}"}
+      .accordion-inner
+        = simple_form_for report, url: my_reports_path, remote: true, html: {method: :post, class: 'form-horizontal'} do |f|
+          = f.input :message, input_html: {rows: 8, style: 'width:95%'}, placeholder: t('my.reports.new.placeholder')
+          = f.input :project_id, as: :hidden

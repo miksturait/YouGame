@@ -1,0 +1,19 @@
+<div class="ta_c"><h2>Recent Log's Entries</h2></div>
+
+<div class="activities">
+    {{#each activities}}
+    <div class="activity_item well">
+        <div class="avatar">
+            <a {{action "showMemberProfile" member}}>
+                <img {{bindAttr title="member.full_name" src="member.avatarMidUrl"}} />
+            </a>
+            <p class="date hint">{{formattedCreatedAt}}</p>
+        </div>
+        <div class="description">
+            <h4>{{subject}}</h4>
+            <p>{{raw text}}</p>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    {{/each}}
+</div>

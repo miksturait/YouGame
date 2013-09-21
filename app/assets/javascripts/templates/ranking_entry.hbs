@@ -1,0 +1,11 @@
+<div class="ranking-place">
+    {{view.content.placeInRanking}}
+</div>
+<a {{action "showMemberProfile" view.content.member}}>
+    <img {{bindAttr src="view.content.member.avatarSemiMidUrl"}} />
+</a>
+<h4>{{view.content.member.full_name}}</h4>
+<div class="progress progress-info">
+    <div class="bar" {{bindAttr style="view.content.getProgressBarStyle"}}></div>
+    <span class="points">{{view.content.getFormattedPoints}}</span>
+</div>

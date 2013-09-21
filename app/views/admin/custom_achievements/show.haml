@@ -1,0 +1,7 @@
+%h2= t('.title')
+= simple_form_for resource, url: grant_admin_custom_achievement_path(resource), html: {method: :post, class: 'form-horizontal well'} do |f|
+  .fltr= link_to t('back', cascade: true), :back, class: 'btn'
+  .form-inputs
+    = f.input :grant_member_ids, collection: @tracker.visible_members, input_html: {multiple: true}
+  .form-actions
+    = f.button :submit, t('.grant'), class: 'btn btn-primary'

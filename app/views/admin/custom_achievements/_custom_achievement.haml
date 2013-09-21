@@ -1,0 +1,10 @@
+%tr
+  %td= image_tag(custom_achievement.picture.file_url(:thumb))
+  %td= custom_achievement.symbol
+  %td= custom_achievement.name
+  %td= custom_achievement.message
+  %td= custom_achievement.exp_points || '-'
+  %td= custom_achievement.mineral_points || '-'
+  %td
+    = link_to t('edit'), edit_admin_custom_achievement_path(custom_achievement), class:'btn btn-mini'
+    = link_to t('.grant'), admin_custom_achievement_path(custom_achievement), class:'btn btn-mini'

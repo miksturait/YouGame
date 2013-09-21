@@ -1,0 +1,1 @@
+YoutrackGame.ActivitiesController = YoutrackGame.BaseController.create()

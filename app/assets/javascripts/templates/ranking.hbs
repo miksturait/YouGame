@@ -1,0 +1,36 @@
+<ul class="nav nav-pills ranking-submenu">
+    <li class="ranking-today"><a href="#" onclick="YoutrackGame.showRanking('today')">Today</a></li>
+    <li class="ranking-week"><a href="#" onclick="YoutrackGame.showRanking('week')">Week</a></li>
+    <li class="ranking-month"><a href="#" onclick="YoutrackGame.showRanking('month')">Month</a></li>
+</ul>
+
+<div class="ta_c"><h2>{{nameOfRanking}}</h2></div>
+
+{{#if hasMoreInTop}}
+    <p class="ranking-more">
+        &#8230;
+    <p>
+{{/if}}
+
+{{view Ember.CollectionView
+  contentBinding="rankingEntries"
+  itemViewClass="YoutrackGame.RankingEntryView"
+  classNames="ranking_entries_container"
+}}
+
+{{#if hasMoreInBottom}}
+    <p class="ranking-more">
+        &#8230;
+    <p>
+{{/if}}
+
+<div class="ta_c"><h2>Other Engineers</h2></div>
+<div class="other-members">
+    {{#each member in otherMembers}}
+        <div class="well pull-left">
+            <a class="pull-left" {{action "showMemberProfile" member}}>
+                <img {{bindAttr src="member.avatarMidUrl" title="member.full_name"}} />
+            </a>
+        </div>
+    {{/each}}
+</div>

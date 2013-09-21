@@ -1,0 +1,131 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://example.com/youtrack/rest/user/login
+    body:
+      encoding: US-ASCII
+      string: login=administrator&password=password
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sat, 21 Sep 2013 16:01:10 GMT
+      Content-Type:
+      - application/xml; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Set-Cookie:
+      - JSESSIONID=kwqsq9n7pe4p1hwlrvwsm6feu;Path=/youtrack
+      - jetbrains.charisma.main.security.PRINCIPAL=NmM4OTA2NDUyYTNhMDdiNDY0YmU1Y2U4NDRhZDQ5OGIxZjcwZDcwY2M3Yzg1MzJiZTlkYjczZDU3OGI0ZmZlMjpyb290;Path=/youtrack;Expires=Sun,
+        21-Sep-2014 16:01:10 GMT
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Cache-Control:
+      - no-cache, no-store, no-transform, must-revalidate
+    body:
+      encoding: UTF-8
+      string: <login>ok</login>
+    http_version: 
+  recorded_at: Sat, 21 Sep 2013 16:01:10 GMT
+- request:
+    method: get
+    uri: http://example.com/youtrack/rest/user/current?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+      Cookie:
+      - JSESSIONID=kwqsq9n7pe4p1hwlrvwsm6feu;Path=/youtrack, jetbrains.charisma.main.security.PRINCIPAL=NmM4OTA2NDUyYTNhMDdiNDY0YmU1Y2U4NDRhZDQ5OGIxZjcwZDcwY2M3Yzg1MzJiZTlkYjczZDU3OGI0ZmZlMjpyb290;Path=/youtrack;Expires=Sun,
+        21-Sep-2014 16:01:10 GMT
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sat, 21 Sep 2013 16:01:10 GMT
+      Content-Type:
+      - application/xml; charset=UTF-8
+      Content-Length:
+      - '177'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Cache-Control:
+      - no-cache, no-store, no-transform, must-revalidate
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><user filterFolder="yougame"
+        lastCreatedProject="yougame" login="root" email="admin@example.com"
+        fullName="Admin"/>
+    http_version: 
+  recorded_at: Sat, 21 Sep 2013 16:01:11 GMT
+- request:
+    method: get
+    uri: http://example.com/youtrack/rest/admin/user/root/role?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+      Cookie:
+      - JSESSIONID=kwqsq9n7pe4p1hwlrvwsm6feu;Path=/youtrack, jetbrains.charisma.main.security.PRINCIPAL=NmM4OTA2NDUyYTNhMDdiNDY0YmU1Y2U4NDRhZDQ5OGIxZjcwZDcwY2M3Yzg1MzJiZTlkYjczZDU3OGI0ZmZlMjpyb290;Path=/youtrack;Expires=Sun,
+        21-Sep-2014 16:01:10 GMT
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sat, 21 Sep 2013 16:01:11 GMT
+      Content-Type:
+      - application/xml; charset=UTF-8
+      Content-Length:
+      - '171'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Cache-Control:
+      - no-cache, no-store, no-transform, must-revalidate
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><userRoles><userRole
+        name="Admin"><projects/></userRole><userRole name="Observer"><projects/></userRole></userRoles>
+    http_version: 
+  recorded_at: Sat, 21 Sep 2013 16:01:11 GMT
+recorded_with: VCR 2.5.0

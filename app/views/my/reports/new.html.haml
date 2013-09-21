@@ -1,0 +1,16 @@
+.row-fluid
+  .span10
+    %h1 Make Report
+    %p
+      = t('mails.week_update.use_markdown')
+      = t('mails.week_update.subtitle', from: @current_report_date.to_s(:short),
+                                        to: @current_report_date.end_of_week.to_s(:short))
+      \:
+
+    - @reports.each_with_index do |report, index|
+      = render partial: 'report', locals: { report: report, index: index }
+
+  .span2
+    %button.btn.btn-success.btn-large.report-submit
+      %i.icon-ok.icon-white
+      Save All

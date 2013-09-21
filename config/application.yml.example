@@ -1,0 +1,11 @@
+# Add application configuration variables here, as shown below.
+#
+PUSHER_APP_ID: ""
+PUSHER_KEY: ""
+PUSHER_SECRET: ""
+
+GMAIL_MAIL: ""
+GMAIL_PASSWORD: ""
+
+SUPPORT_MAIL: ""
+REDISTOGO_URL: "redis://127.0.0.1:6379"

@@ -1,0 +1,1 @@
+YoutrackGame.ApplicationController = Ember.Controller.extend({})

@@ -1,0 +1,26 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: ytg_development
+  pool: 5
+  username: root
+  password: root
+  template: template0
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: ytg_test
+  pool: 5
+  username: root
+  password: root
+  template: template0
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: ytg_production
+  pool: 5
+  username: root
+  password: root
+  template: template0

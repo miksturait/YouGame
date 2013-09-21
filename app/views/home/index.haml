@@ -1,0 +1,140 @@
+%ul{class:'nav nav-tabs carousel-tabs'}
+  %li.active{data:{tab: 'welcome'}}= link_to 'Welcome', '#'
+  %li{data:{tab: 'story'}}= link_to 'The Story', '#'
+  %li{data:{tab: 'rules'}}= link_to 'The Rules', '#'
+  %li{data:{tab: 'yougame'}}= link_to 'YouGame components', '#'
+  %li{data:{tab: 'hints'}}= link_to 'Final Hints', '#'
+
+#intro-carousel{class: 'carousel slide well'}
+  .carousel-inner
+    .item.active{data:{tab: 'welcome'}}
+      .row
+        .span12.welcome
+          = link_to_function image_tag('intro/welcome.png'), 'YoutrackGame.showIntroVideo()'
+    .item{data:{tab: 'story'}}
+      .row
+        .span4
+          = image_tag 'intro/city.png'
+        .span8
+          %h2 Our Home
+          Year 2146. Humankind is compelled to search with hope for new habitats beyond the solar system. The planet
+          Earth is not a sufficient shelter for everyone because of the overpopulation. The average life expectancy for
+          a human is still prolonged by the remarkably advanced technologies and most of the civilization diseases,
+          people were coping with during XXI century, have been finally vanquished. Due to these facts a human can live
+          to a great age of 138! It is impossible to extend the housing estates which already soar over a dozen
+          kilometers both into the sky and below ground. The Earth faces the imminent danger of an excessive load in
+          the next several years.
+    .item{data:{tab: 'story'}}
+      .row-fluid
+        .span4
+          = image_tag 'intro/spaceship.png'
+        .span8
+          %h2 The Last Hope
+          Thankfully, The Last Hope organization has arisen to save the whole mankind. The aim of the appointed squad,
+          divided into specialized teams, is to facilitate and ensure the settlement of selected planets within distant
+          galaxies. The advanced space shuttles equipped with molecular mass destabilisor allow precise and quick
+          travelling across galaxies. Still it is not a simple mission. All of discovered planets, that meet human
+          existence criteria, are already inhabited by hostile races.
+    .item{data:{tab: 'rules'}}
+      .row-fluid
+        .span4
+          = image_tag 'intro/collecting.png'
+        .span8
+          %h2 The Plan
+          The role of The Last Hope engineers is to land on the planet and take control over a hostile race.
+          Every landing happens at the very first day of a month according to the terrestial calendar and the process
+          of taking over control must be finished before the end of the same month. In the situation of failure, the
+          team is forced to abandon the planet for the risk of losing team members. To perform the process, engineers
+          use the massive Supervision Molecules Electron-Distributor (SMED) that can transform essential mineral into
+          the Supervision Molecules. That transformation weakens the agressive character, yet strengthen the
+          collaboration. Other races would be induced by means of the SMED to co-existence, development and
+          settlement of humankind.
+    .item{data:{tab: 'rules'}}
+      .row-fluid
+        .span4
+          = image_tag 'intro/astronaut.png'
+        .span8
+          %h2 Do Your Best
+          Each time the engineers have only one month to collect enough quantity of essential mineral.
+          Acquiring of the material happens during daily scheduled tasks. The only way of conquering the planet is
+          mutual collaboration and conscientiousness within the team. The survival and development of humankind are
+          dependent on great regularity in the settlement of the universe furthest corners.
+    .item{data:{tab: 'yougame'}}
+      .row-fluid
+        .span4
+          = image_tag 'intro/youtrack.png'
+        .span8
+          %h2 Starting Point
+          Create your YouGame account and then connect it with your YouTrack account by describing tracker's url, email and password
+          (we will not store this credentials). After successful verification you will be able to use YouGame Dashboard.
+          If your YouTrack has not been connected with the YouGame yet, then credentials for admin account will be required.
+    .item{data:{tab: 'yougame'}}
+      .row-fluid
+        .span4
+          = image_tag 'intro/mission_screen.png'
+        .span8
+          %h2 Mission Overview
+          In the mission screen you can see what is the current progress made by your organisation and the time to mission's ending.
+          Also, you can check which planet you try to colonize and which brood you fight againts. Keep in mind that solving
+          YouTrack tasks often results in collecting minerals and gaining experience. You and your organisation should have
+          collected required quantity of mineral by the end of the month. Otherwise... get out of this planet! You are in danger!
+    .item{data:{tab: 'yougame'}}
+      .row-fluid
+        .span4
+          = image_tag 'intro/logs.png'
+        .span8
+          %h2 Recent Activity
+          In logs screen you are able to browse recent activities in your organisation. You don't need to refresh page to see
+          new activity logs - you will be informed about them automatically.
+    .item{data:{tab: 'yougame'}}
+      .row-fluid
+        .span4
+          = image_tag 'intro/ranking.png'
+        .span8
+          %h2 Experience Rankings
+          In Engineers screen you can check who of your fellow engineers tops today, this week and this month. Keep
+          solving your tasks to stay on top.
+    .item{data:{tab: 'yougame'}}
+      .row-fluid
+        .span4
+          = image_tag 'intro/dossier.png'
+        .span8
+          %h2 Your Dossier
+          In your dossier you can find an information about your experience points, current level and the rank. Also, you can
+          investigate the list of your tasks, unlocked achievements and summary of the collected minerals.
+    .item{data:{tab: 'yougame'}}
+      .row-fluid
+        .span4
+          = image_tag 'intro/difficulty.png'
+        .span8
+          %h2 Working with Tasks
+          It's good to know that tasks can have different difficulty levels. You can define them in the YouTrack
+          while creating or updating a task. Use it wisely, since not every task is really hard. When you solve a task with
+          "No Effort" difficulty, then you will receive only experience points.
+    .item{data:{tab: 'yougame'}}
+      .row-fluid
+        .span4
+          = image_tag 'intro/notifications.png'
+        .span8
+          %h2 Instant feedback
+          To use YouGame you don't have to change anything in your workstyle. YouGame fetches data from YouTrack,
+          interprets it and delivers fun right to you! Enable desktop notifications in Edit Profile page to let YouGame
+          inform you about your scores and activity.
+    .item{data:{tab: 'hints'}}
+      .row-fluid
+        .span4
+          = image_tag 'intro/final.png'
+        .span8
+          %h2 Final Hints
+          %ul
+            %li Keep your tasks states up to date
+            %li Define right difficulty level
+            %li When task is marked as completed then points go to person who is assigned to this task
+            %li If task changes state from Completed to In Progress or Backlog, then previously gained points are removed
+            %li Break big problems into smaller tasks, so you could measure your progress constantly
+            %li Seek the occasions to unlock new achievements
+            %li Encourage your fellow engineers to perform better and better
+
+  %a{class: 'carousel-control left', href: '#intro-carousel',data:{slide: 'prev'}} &lsaquo;
+  %a{class: 'carousel-control right', href: '#intro-carousel',data:{slide: 'next'}} &rsaquo;
+

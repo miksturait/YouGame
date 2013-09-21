@@ -1,0 +1,82 @@
+<div class="row-fluid">
+    <div class="span1"></div>
+    <div class="span5">
+        <div class="row-fluid ta_c">
+            <h2>Progress</h2>
+        </div>
+        <div class="row-fluid">
+            <div class="span6 mission-progress">
+                <input type="text" style="display:none" id="mission-mineral-target" class="knob-input" {{bindAttr value="level.timeProgress"}} />
+                <input type="text" style="display:none" id="mission-mineral-progress" class="knob-input" {{bindAttr value="level.progress"}}/>
+                <input type="text" style="display:none" id="mission-mineral-member" class="knob-input" {{bindAttr value="currentMember.shareInLevelMinerals"}} />
+            </div>
+            <div class="span6 mission-minerals-state">
+                <span class="badge badge-warning">{{level.producedMineralLabel}}</span><br/>
+                <span class="badge badge-success">{{currentMember.currentLevelMineralLabel}}</span><br/>
+                <span class="badge badge-important">{{level.requiredMineralLabel}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="span5 ta_c">
+        <h2>Time left</h2>
+        {{#if level.isMissionCompleted}}
+            <div class="mission-completed">Mission Completed!</div>
+        {{else}}
+            <div {{bindAttr title="level.titleMissionTime" class="level.cssMissionTime"}}></div>
+        {{/if}}
+    </div>
+    <div class="span1"></div>
+</div>
+<div class="row-fluid">
+    <div class="span3 well mineral-box">
+        <h4>Mineral</h4>
+        <div class="ta_c">
+            <a {{bindAttr href="level.mineral_image_path"}} data-colorbox="true">
+                <img {{bindAttr src="level.mineral_image_path"}}/>
+            </a>
+            <h5>{{level.mineral_label}}</h5>
+        </div>
+        <p>{{level.mineral_description}}</p>
+    </div>
+    <div class="span3 well planet-box">
+        <h4>Planet</h4>
+        <div class="ta_c">
+            <a {{bindAttr href="level.planet_image_path"}} data-colorbox="true">
+                <img {{bindAttr src="level.planet_image_path"}}/>
+            </a>
+            <h5>{{level.planet_label}}</h5>
+        </div>
+        <p>{{level.planet_description}}</p>
+    </div>
+    <div class="span3 well brood-box">
+        <h4>Brood</h4>
+        <div class="ta_c">
+            <a {{bindAttr href="level.brood_image_path"}} data-colorbox="true">
+                <img {{bindAttr src="level.brood_image_path"}}/>
+            </a>
+            <h5>{{level.brood_label}}</h5>
+        </div>
+        <p>{{level.brood_description}}</p>
+    </div>
+    <div class="span3 well">
+        <h4>Latest logs</h4>
+        {{#if hasLatestLogs}}
+            {{#each latestLogs}}
+                <div class="media">
+                    <a {{action "showMemberProfile" member}} class="pull-left">
+                        <img class="media-object" {{bindAttr title="member.full_name" src="member.avatarSmallUrl"}} />
+                    </a>
+                    <div class="media-body">
+                        <span class="log-time-ago">{{formattedTimeAgo}}</span>
+                        <a {{action "showMemberProfile" member}}>
+                            <h6 class="media-heading">{{member.full_name}}</h6>
+                        </a>
+                        {{raw text}}
+                    </div>
+                </div>
+            {{/each}}
+        {{else}}
+            <p class="hint">Nothing happened recently</p>
+        {{/if}}
+    </div>
+</div>

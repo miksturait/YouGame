@@ -1,0 +1,1 @@
+YoutrackGame.MineralsController = Ember.ArrayController.create()

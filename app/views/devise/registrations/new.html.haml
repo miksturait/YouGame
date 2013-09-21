@@ -1,0 +1,21 @@
+%h2 Sign up
+
+= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: 'form-horizontal' }) do |f|
+  .container-fluid.well
+    .row-fluid
+      .form-inputs.span12
+        %h3 New account
+        %p
+          Please register to YouGame with the
+          %span.text-info same email address
+          , that you are using in your YouTrack.
+          Then we will send you activation link via email.
+
+        = f.input :email, required: true, autofocus: true
+        = f.input :password, required: true
+        = f.input :password_confirmation, required: true
+    .row-fluid
+      .form-actions
+        = f.button :submit, "Sign up", class: 'btn btn-primary'
+
+= render "devise/shared/links"

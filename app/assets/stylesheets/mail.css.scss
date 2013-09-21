@@ -1,0 +1,107 @@
+@import "bootstrap";
+
+.mail-body {
+
+  .main-content {
+    background: #2f3b51 !important;
+    color: #ffffff !important;
+  }
+
+  * {
+    color: #ffffff !important;
+  }
+
+  p {
+    color: #ffffff !important;
+  }
+
+  .well {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    border: none !important;
+  }
+
+  h1,h2,h3,h4,h5,h6,a {
+    color: #e36b23 !important;
+    text-decoration: none;
+    text-shadow: -2px 2px 0 #612c0c !important;
+    margin: 15px 0 !important;
+  }
+
+  badge-warning {
+    background: #e36b23 !important;
+    border-radius: 5px !important;
+    padding:4px !important;
+  }
+
+  .subtitle {
+  }
+
+  .stats {
+    .well {
+      text-align:center;
+      min-height:300px !important;
+    }
+
+    img {
+      margin-bottom: 20px;
+    }
+  }
+
+  .percent-progress {
+    font-size: 60px;
+    line-height: 60px;
+    margin-top: 30px;
+  }
+
+  .minerals {
+    font-size: 15px;
+    line-height: 20px;
+    border-radius: 5px;
+    margin: 10px 0;
+    color: #e36b23 !important;
+  }
+
+  .ranking-mineral-place {
+    font-size: 40px;
+    line-height: 40px;
+    margin: 10px 0;
+  }
+
+  .reports {
+
+    margin-top: 20px;
+
+    h5 {
+      display: inline;
+    }
+
+    img {
+      margin-right: 10px;
+    }
+
+    .message-container {
+      margin: 10px 55px;
+    }
+  }
+
+  .time-ok
+  {
+    color: #fff !important;
+  }
+
+  .time-warning
+  {
+    color: #ffa500 !important;
+  }
+
+  .time-alert
+  {
+    color: #ff0000 !important;
+  }
+
+  .time-good
+  {
+    color: #7cfc00 !important;
+  }
+
+}

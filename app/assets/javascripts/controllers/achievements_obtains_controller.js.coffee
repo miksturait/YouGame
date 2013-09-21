@@ -1,0 +1,1 @@
+YoutrackGame.AchievementsObtainsController = Ember.ArrayController.create()

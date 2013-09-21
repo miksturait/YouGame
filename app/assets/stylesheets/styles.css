@@ -1,0 +1,413 @@
+body
+{
+    background-color: black;
+    background-image: url('background.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment:fixed;
+    font-family: "Oswald", sans-serif;
+}
+
+img
+{
+    border-radius: 3px;
+}
+
+ul
+{
+    list-style: none;
+    margin: 0;
+}
+
+input, select, button, textarea
+{
+    font-family: "Oswald", sans-serif
+}
+
+.well {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.ta_c
+{
+    text-align: center;
+}
+
+.ta_r
+{
+    text-align: right;
+}
+
+.ta_l
+{
+    text-align: left;
+}
+
+.fltr
+{
+    float: right
+}
+
+.fltl
+{
+    float: left
+}
+
+.main_content
+{
+    padding-top: 70px;
+    padding-bottom: 60px;
+    margin: 20px 0;
+}
+
+.navbar li.active
+{
+    border-bottom: 5px solid #e36b23;
+}
+
+.small
+{
+    font-size: 60%
+}
+
+.hint
+{
+    color: #808080
+}
+
+.important-text
+{
+    color: rgb(116, 160, 185);
+}
+
+.log-time-ago
+{
+    font-size: 70%;
+    color: #808080;
+    float:right
+}
+
+a:hover
+{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.knob-input
+{
+    outline: none;
+    border:none !important;
+    box-shadow:none !important;
+}
+
+.contributors
+{
+    position:absolute;
+    bottom: -70px;
+    right: 5px;
+}
+
+.contributors a
+{
+    opacity: 0.2;
+}
+
+.contributors a:hover
+{
+    opacity: 1.0;
+}
+
+/* Assignments template */
+
+.assignment_item
+{
+    width: 235px;
+    height: 150px;
+    float: left;
+    margin: 10px;
+
+}
+
+.assignment_item h3
+{
+    font-size: 20px;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.assignment_item h3 img
+{
+    margin-right: 10px;
+}
+
+.assignment_item .no_data
+{
+    text-align: center;
+    color: #888;
+}
+
+/* Ranking template */
+
+.ranking_entry
+{
+    padding: 10px;
+
+}
+
+.progress .points
+{
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.ranking-place
+{
+    float:left;
+    font-size: 40px;
+    margin: 30px;
+    width: 25px;
+}
+
+.ranking_entry > a
+{
+    float:left;
+    margin-right: 20px;
+}
+
+.ranking-more
+{
+    text-align:center;
+    font-size: 80px;
+    line-height: 80px;
+    margin-top: -40px;
+    margin-bottom: 30px;
+}
+
+.ranking-submenu
+{
+    position: absolute;
+    right: 20px;
+}
+
+.other-members .well
+{
+    margin: 10px;
+}
+
+/* Activity template */
+
+.activity_item .avatar
+{
+    float:left
+}
+
+.activity_item .description
+{
+    float:left;
+    margin-left: 10px;
+}
+
+.activity_item .date
+{
+    text-align: center;
+}
+
+.audit
+{
+    padding-top: 10px;
+}
+
+/* Mission template */
+
+.planet-box img, .brood-box img, .mineral-box img
+{
+    width:70%;
+    box-shadow: 3px 3px 5px #000;
+}
+
+.mission-time, .mission-completed
+{
+    font-family: "Oswald", sans-serif;
+    margin: 60px 0;
+    font-size: 32px;
+    line-height: 32px;
+    text-shadow: 2px 2px 5px #000;
+}
+
+.mission-time.time-ok
+{
+    color: #fff
+}
+
+.mission-time.time-warning
+{
+    color: #ffa500;
+}
+
+.mission-time.time-alert
+{
+    color: #ff0000;
+}
+
+.mission-completed, .time-good
+{
+    color: #7cfc00;
+}
+
+.mission-progress
+{
+    margin-bottom: 10px;
+    margin-top: 20px;
+    position:relative;
+}
+
+.mission-progress > div
+{
+    position:absolute;
+    right: 0
+}
+
+.mission-minerals-state
+{
+    padding: 50px 10px;
+}
+
+.mission-minerals-state > span
+{
+    margin-bottom: 5px;
+}
+
+.mission-engineer
+{
+    display: inline-block;
+}
+
+/* Dossier template */
+
+.dossier-header
+{
+    margin: 30px 0;
+}
+
+.dossier-level span
+{
+    font-size:65px;
+    line-height: 65px;
+    padding: 10px;
+}
+
+.dossier-assignments li
+{
+    margin-bottom: 5px;
+}
+
+.dossier-assignments a
+{
+    color: #fff;
+}
+
+.dossier-assignments a:hover
+{
+    color: inherit;
+}
+
+.dossier-stamina, .dossier-stamina p
+{
+    margin-top: 10px;
+}
+
+.dossier-stamina-critical
+{
+    color: #ff0000;
+}
+
+.dossier-stamina-warning
+{
+    color: #ffa500;
+}
+
+/* Home page */
+.carousel-tabs
+{
+    margin-left: 30px;
+}
+
+#intro-carousel
+{
+    height: 410px;
+    line-height: 24px;
+    text-align: justify;
+    margin-top: -20px;
+}
+
+.carousel-control
+{
+    font-size: 48px;
+    top: 45%;
+}
+
+#intro-carousel .item .span4
+{
+    padding-top: 60px;
+    padding-left: 60px;
+    text-align: center;
+}
+
+#intro-carousel .item .span8
+{
+    padding-right: 60px;
+}
+
+#intro-carousel .item img
+{
+    border-radius: 5px;
+}
+
+#intro-carousel .item .welcome
+{
+    text-align: center;
+    position: relative;
+}
+
+#intro-carousel .item .welcome h1
+{
+    position: absolute;
+    top: 40px;
+
+}
+
+#intro-carousel .item img
+{
+    margin-top: 15px;
+}
+
+#intro-carousel ul
+{
+    list-style-type: square;
+}
+
+#intro-carousel ul li
+{
+    line-height: 24px;
+}
+
+
+/* reports */
+
+.report-group .alert {
+    margin-bottom: 0;
+    text-align: right;
+}
+
+/* colorbox */
+
+#cboxClose
+{
+    border: none;
+}
+
+#colorbox
+{
+    outline:0;
+}

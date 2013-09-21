@@ -1,0 +1,5 @@
+- if user_signed_in? and current_user.tracker_installing?
+  .alert
+    %button.close{type: 'button', data: {dismiss: 'alert'}} &times
+    %h4.alert-heading Installation in progress
+    %p YouGame is being synchronized with your tracker now. This may take few minutes...

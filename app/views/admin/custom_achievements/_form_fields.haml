@@ -1,0 +1,9 @@
+= f.simple_fields_for :picture, f.object.picture || f.object.build_picture do |ff|
+  .ta_c= image_tag(ff.object.file_url(:large)) if ff.object.file?
+  = ff.hidden_field :file_cache
+  = ff.input :file
+= f.input :symbol, hint: 'Use symbol to grant achievements via YouGame API.'
+= f.input :name
+= f.input :message
+= f.input :exp_points, as: :integer, required: false
+= f.input :mineral_points, as: :integer, required: false

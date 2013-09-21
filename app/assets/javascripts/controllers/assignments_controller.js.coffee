@@ -1,0 +1,1 @@
+YoutrackGame.AssignmentsController = YoutrackGame.BaseController.create()

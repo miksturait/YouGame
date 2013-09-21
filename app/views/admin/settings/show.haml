@@ -1,0 +1,34 @@
+%h2 Settings
+
+= simple_form_for @tracker, url: admin_setting_path, html: { method: :put, class: 'form-horizontal well' } do |f|
+  .fltr
+    = link_to t('.perform_full_update'),
+              admin_setting_path(make_update: true),
+              method: :post,
+              title: t('.perform_full_update_title'),
+              class: 'btn btn-warning'
+    %br
+    %small= t('.last_full_sync_at', time: @tracker.last_full_sync_at ? @tracker.last_full_sync_at.to_s(:short) : t('never'))
+  .container-fluid
+    .row-fluid
+      .form-inputs.span12
+        %h4= t('.api_key_title')
+        %p= t('.api_key_info_html')
+        %pre= @tracker.api_key
+        = link_to t('.generate_api_key'),
+                  admin_setting_path(generate_api_key: true),
+                  method: :post,
+                  class: 'btn btn-warning',
+                  confirm: t('confirmation')
+    .row-fluid
+      %h4= t('.settings_title')
+      .form-inputs.span12
+        = f.input :url
+        = f.input :issue_difficulty_field
+        = f.input :issue_accepted_state
+        = f.input :issue_in_progress_state
+        = f.input :issue_backlog_state
+        = f.input :hidden_member_ids, collection: f.object.members, input_html: {multiple: true}
+    .row-fluid
+      .form-actions
+        = f.button :submit, "Update", class: 'btn btn-primary'

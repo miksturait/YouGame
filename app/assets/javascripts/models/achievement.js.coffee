@@ -1,0 +1,1 @@
+YoutrackGame.Achievement = Ember.Object.extend()

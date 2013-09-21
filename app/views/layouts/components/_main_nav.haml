@@ -1,0 +1,15 @@
+- if user_signed_in?
+  %ul.nav.pull-right
+    %li= link_to t('.dashboard'), my_screen_path
+    %li= link_to t('.edit_profile'), edit_user_registration_path
+    %li= link_to t('.make_report'), new_my_report_path if current_user.is_project_leader?
+    - if current_user.tracker_member.try(:admin?)
+      %li.dropdown
+        = link_to "#", class: 'dropdown-toggle', data: {toggle: 'dropdown'} do
+          = t('.admin')
+          %b.caret
+        %ul.dropdown-menu
+          %li= link_to t('.settings'), admin_setting_path
+          %li= link_to t('.custom_achievements'), admin_custom_achievements_path
+
+    %li= link_to t('.sign_out'), destroy_user_session_path, method: :delete

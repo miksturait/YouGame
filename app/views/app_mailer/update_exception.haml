@@ -1,0 +1,6 @@
+%h1 There was an exception during tracker update
+%h3= @error.message
+.well
+  %ul
+    - @error.backtrace.each do |trace|
+      %li= trace
