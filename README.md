@@ -20,6 +20,10 @@ selected planets within remote galaxies. As a Spaceship Commander you will help 
 * Form Builder: SimpleForm
 * Authentication: Devise
 
+### How it works
+
+![How it works](https://github.com/miksturait/YouGame/raw/master/public/how_it_works.png)
+
 ### Download and setup application
 
     git clone git@github.com:miksturait/YouGame.git
@@ -53,6 +57,10 @@ RAILS_ENV=development rake daemon:yougame_updater:stop # stops updater daemon
 * PostgreSQL  >= 9.0
 * EmberJs 0.8
 * Redis 3.0.2
+
+## Licence
+
+MIT
 
 ## Contributors
 
