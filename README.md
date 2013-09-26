@@ -58,6 +58,12 @@ RAILS_ENV=development rake daemon:yougame_updater:stop # stops updater daemon
 * EmberJs 0.8
 * Redis 3.0.2
 
+## Existing Instances
+
+### http://yougameapp.com
+
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/ri7XwoxBkp8/0.jpg)](http://www.youtube.com/watch?v=ri7XwoxBkp8)
+
 ## Licence
 
 MIT
