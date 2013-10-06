@@ -2,8 +2,8 @@ class Tracker::Update::YouTrack < Tracker::Adapters::YouTrack
 
   protected
   def process
-    tracker.current_level || Tracker::Level.generate_for(tracker)
-    tracker.last_sync_at ||= DateTime.now
+    tracker.current_level ||= Tracker::Level.generate_for(tracker)
+    tracker.last_sync_at  ||= DateTime.now
     if options[:full_update]
       update_members
       update_groups
