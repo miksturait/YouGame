@@ -23,7 +23,7 @@ class User < ActiveRecord::Base
   end
 
   def is_project_leader?
-    tracker.projects.where(lead_id: tracker_member_id).present?
+    tracker and tracker.projects.where(lead_id: tracker_member_id).present?
   end
 
 end
